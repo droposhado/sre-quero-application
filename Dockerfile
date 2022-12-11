@@ -32,7 +32,7 @@ COPY --from=builder /venv /venv
 
 USER $USERNAME
 
-RUN ls -lha /bin/ && ls -lha /app && ls -lha /venv/bin
+RUN ls -lha /bin/ && ls -lha /app && ls -lha /venv/bin && cat /app/entrypoint.sh
 
 EXPOSE 8080
 
