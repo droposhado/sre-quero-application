@@ -1,0 +1,21 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  # Optional: allow read access to pull request. Use with `only-new-issues` option.
+  # pull-requests: read
+
+jobs:
+  build-push:
+    uses: droposhado/workflows/.github/workflows/docker-build-push.yml@main
+    with:
+      registry: quay.io
+      push: true
+      tags: "quay.io/droposhado/sre-quero-application:latest"
+    secrets:
+      username: ${{ secrets.USERNAME }}
+      password: ${{ secrets.PASSWORD }}
