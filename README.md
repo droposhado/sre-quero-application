@@ -6,9 +6,11 @@ Esta é uma aplicação dummy com o objetivo de:
 - os `status codes` são `>= 100` até `<= 599`;
   - rota não encontrada retorna 404;
 - gerar arquivo de log de request (`access.log`) na pasta `/var/log/app`.
+- o build e push da imagem é feito automáticamente,
 
 ## Stack
 
+- [Github Actions](.github/workflows/push.yml);
 - [Flask](https://flask.palletsprojects.com);
 - [gunicorn](https://gunicorn.org/).
 
