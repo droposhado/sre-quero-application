@@ -4,7 +4,7 @@ Esta é uma aplicação dummy com o objetivo de:
 
 - returnar o `status code` baseado no `path` da requisição.;
 - os `status codes` são `>= 100` até `<= 599`;
-- gerar arquivo de log de request (`access.log) na pasta c/var/log/app`.
+- gerar arquivo de log de request (`access.log`) na pasta c/var/log/app`.
 
 ## Uso
 
